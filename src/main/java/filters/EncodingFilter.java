@@ -1,4 +1,5 @@
 package filters;
+
 import java.io.IOException;
 
 import javax.servlet.Filter;
@@ -13,7 +14,7 @@ import javax.servlet.annotation.WebFilter;
  * Servlet Filter implementation class EncodingFilter
  */
 @WebFilter("/*")
-public class EncodingFilter {
+public class EncodingFilter implements Filter {
 
     /**
      * Default constructor.
@@ -45,7 +46,4 @@ public class EncodingFilter {
     public void init(FilterConfig fConfig) throws ServletException {
 
     }
-
 }
-
-

@@ -19,7 +19,7 @@ import constants.PropertyConst;
  * 各Actionクラスの親クラス。共通処理を行う。
  *
  */
-public class ActionBase {
+public abstract class ActionBase {
     protected ServletContext context;
     protected HttpServletRequest request;
     protected HttpServletResponse response;
@@ -45,8 +45,7 @@ public class ActionBase {
      * @throws ServletException
      * @throws IOException
      */
-    public void process() throws ServletException, IOException {
-    }
+    public abstract void process() throws ServletException, IOException;
 
     /**
      * パラメータのcommandの値に該当するメソッドを実行する
@@ -241,5 +240,4 @@ public class ActionBase {
     protected <R> R getContextScope(PropertyConst key) {
         return (R) context.getAttribute(key.getValue());
     }
-
 }

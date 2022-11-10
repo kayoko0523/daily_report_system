@@ -10,7 +10,7 @@ import constants.ForwardConst;
  * エラー発生時の処理行うActionクラス
  *
  */
-public class UnknownAction extends ActionBase{
+public class UnknownAction extends ActionBase {
     /**
      * 共通エラー画面「お探しのページは見つかりませんでした。」を表示する
      */
@@ -21,9 +21,4 @@ public class UnknownAction extends ActionBase{
         forward(ForwardConst.FW_ERR_UNKNOWN);
     }
 
-
-
-    }
-
-
-
+}
